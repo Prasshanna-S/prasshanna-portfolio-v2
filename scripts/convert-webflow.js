@@ -59,7 +59,19 @@ function cssPropertyToJS(prop) {
   return clean.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
 }
 
+function decodeHtmlEntities(str) {
+  return str
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'");
+}
+
 function convertInlineStyle(styleStr) {
+  // Decode HTML entities first (e.g. &quot; in url() values)
+  styleStr = decodeHtmlEntities(styleStr);
   // Parse CSS style string into React style object
   // Split on semicolons but respect url() and parentheses
   const parts = [];
@@ -87,6 +99,8 @@ function convertInlineStyle(styleStr) {
 
     const jsProp = cssPropertyToJS(prop);
 
+    // Remove inner quotes from url() values: url("path") → url(path)
+    val = val.replace(/url\(\s*["']([^"']*?)["']\s*\)/g, 'url($1)');
     // Quote the value - escape single quotes
     val = val.replace(/'/g, "\\'");
     // If value is purely numeric (without units), keep as number
@@ -135,13 +149,11 @@ function htmlToJsx(html, isSubpage = false) {
 
   // Fix image paths: src="images/ → src="/images/
   jsx = jsx.replace(/src="images\//g, 'src="/images/');
-  jsx = jsx.replace(/srcset="images\//g, 'srcset="/images/');
-  // Handle multiple srcset entries
-  jsx = jsx.replace(/(srcset="[^"]*?)images\//g, '$1/images/');
-  // Do multiple passes to catch all srcset image references
-  for (let i = 0; i < 10; i++) {
-    jsx = jsx.replace(/(srcset="[^"]*?)\bimages\//g, '$1/images/');
-  }
+  // Fix srcset: replace all bare "images/" with "/images/" inside srcset attributes
+  jsx = jsx.replace(/srcset="([^"]*)"/g, (match, val) => {
+    const fixed = val.replace(/(?<!\/)images\//g, '/images/');
+    return `srcset="${fixed}"`;
+  });
 
   // Fix video paths: src="videos/ → src="/videos/
   jsx = jsx.replace(/src="videos\//g, 'src="/videos/');
@@ -152,12 +164,12 @@ function htmlToJsx(html, isSubpage = false) {
   // For subpages: fix ../images/ and ../videos/ paths
   if (isSubpage) {
     jsx = jsx.replace(/src="\.\.\/images\//g, 'src="/images/');
-    jsx = jsx.replace(/srcset="\.\.\/images\//g, 'srcset="/images/');
-    for (let i = 0; i < 10; i++) {
-      jsx = jsx.replace(/(srcset="[^"]*?)\.\.\/images\//g, '$1/images/');
-    }
     jsx = jsx.replace(/src="\.\.\/videos\//g, 'src="/videos/');
-    jsx = jsx.replace(/url\(&quot;\.\.\/videos\//g, 'url(&quot;/videos/');
+    // Fix srcset for subpages: ../images/ → /images/
+    jsx = jsx.replace(/srcset="([^"]*)"/g, (match, val) => {
+      const fixed = val.replace(/\.\.\/images\//g, '/images/');
+      return `srcset="${fixed}"`;
+    });
   }
 
   // Fix internal links
@@ -170,6 +182,10 @@ function htmlToJsx(html, isSubpage = false) {
   // For subpages with ../ prefix
   jsx = jsx.replace(/href="\.\.\/index\.html"/g, 'href="/"');
   jsx = jsx.replace(/href="\.\.\/explorations\.html"/g, 'href="/explorations"');
+  jsx = jsx.replace(/href="\.\.\/work\/samsung-research\.html"/g, 'href="/work/samsung-research"');
+  jsx = jsx.replace(/href="\.\.\/work\/us-hab-cti\.html"/g, 'href="/work/us-hab-cti"');
+  jsx = jsx.replace(/href="\.\.\/work\/uyir\.html"/g, 'href="/work/uyir"');
+  jsx = jsx.replace(/href="\.\.\/work\/xr-museum\.html"/g, 'href="/work/xr-museum"');
 
   // Self-closing void elements that JSX requires
   // img tags - make self-closing if not already
@@ -373,8 +389,15 @@ export function PageScripts() {
   const metaBlock = pageMetadata ? `
 export const metadata: Metadata = {
   title: '${(pageMetadata.title || '').replace(/'/g, "\\'")}',
-  openGraph: { title: '${(pageMetadata.ogTitle || pageMetadata.title || '').replace(/'/g, "\\'")}' },
-  twitter: { title: '${(pageMetadata.twitterTitle || pageMetadata.title || '').replace(/'/g, "\\'")}' },
+  description: '${(pageMetadata.description || '').replace(/'/g, "\\'")}',
+  openGraph: {
+    title: '${(pageMetadata.ogTitle || pageMetadata.title || '').replace(/'/g, "\\'")}',
+    description: '${(pageMetadata.description || '').replace(/'/g, "\\'")}',
+  },
+  twitter: {
+    title: '${(pageMetadata.twitterTitle || pageMetadata.title || '').replace(/'/g, "\\'")}',
+    description: '${(pageMetadata.description || '').replace(/'/g, "\\'")}',
+  },
 };
 ` : '';
 
@@ -408,7 +431,12 @@ convertPage(
   path.join(outDir, 'page.tsx'),
   'HomePage',
   false,
-  { title: "Prasshanna's Playground" }
+  {
+    title: "Prasshanna's Playground",
+    description: 'UX / Product Designer working at the intersection of interaction design, accessibility, and AI-driven systems.',
+    ogTitle: "Prasshanna's Playground",
+    twitterTitle: "Prasshanna's Playground",
+  }
 );
 
 // Explorations
@@ -417,15 +445,44 @@ convertPage(
   path.join(outDir, 'explorations', 'page.tsx'),
   'ExplorationsPage',
   false,
-  { title: 'Explorations' }
+  {
+    title: 'Explorations',
+    description: 'Fun projects and explorations by Prasshanna — design experiments, creative coding, and more.',
+    ogTitle: 'Explorations',
+    twitterTitle: 'Explorations',
+  }
 );
 
 // Case study pages
 const caseStudies = [
-  { file: 'samsung-research.html', component: 'SamsungResearchPage', title: 'Samsung Research' },
-  { file: 'us-hab-cti.html', component: 'USHabCTIPage', title: 'US HAB-CTI' },
-  { file: 'uyir.html', component: 'UyirPage', title: 'UYIR' },
-  { file: 'xr-museum.html', component: 'XRMuseumPage', title: 'XR Museum' },
+  {
+    file: 'samsung-research.html', component: 'SamsungResearchPage',
+    title: 'Samsung Research',
+    description: 'Interaction Redefined: Rethinking Media & Meetings at Samsung Research — exploring multimodal interaction and video conferencing redesigns.',
+    ogTitle: 'Samsung Research — Interaction Redefined',
+    twitterTitle: 'Samsung Research — Interaction Redefined',
+  },
+  {
+    file: 'us-hab-cti.html', component: 'USHabCTIPage',
+    title: 'US HAB-CTI',
+    description: 'Designing a clearing house website for the US Harmful Algal Bloom and Cyanotoxins Interagency program.',
+    ogTitle: 'US HAB-CTI Clearinghouse',
+    twitterTitle: 'US HAB-CTI Clearinghouse',
+  },
+  {
+    file: 'uyir.html', component: 'UyirPage',
+    title: 'UYIR',
+    description: 'A voice-based AI mental health companion for kids to talk to and express their feelings.',
+    ogTitle: 'UYIR — Kids Mental Health Companion',
+    twitterTitle: 'UYIR — Kids Mental Health Companion',
+  },
+  {
+    file: 'xr-museum.html', component: 'XRMuseumPage',
+    title: 'XR Museum',
+    description: 'An extended reality system built for museums to view data in a visually beautiful way, like never before.',
+    ogTitle: 'XR Museum Experience',
+    twitterTitle: 'XR Museum Experience',
+  },
 ];
 
 for (const cs of caseStudies) {
@@ -434,7 +491,7 @@ for (const cs of caseStudies) {
     path.join(outDir, 'work', cs.file.replace('.html', ''), 'page.tsx'),
     cs.component,
     true,
-    { title: cs.title }
+    { title: cs.title, description: cs.description, ogTitle: cs.ogTitle, twitterTitle: cs.twitterTitle }
   );
 }
 

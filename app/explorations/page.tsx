@@ -3,8 +3,15 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: 'Explorations',
-  openGraph: { title: 'Explorations' },
-  twitter: { title: 'Explorations' },
+  description: 'Fun projects and explorations by Prasshanna — design experiments, creative coding, and more.',
+  openGraph: {
+    title: 'Explorations',
+    description: 'Fun projects and explorations by Prasshanna — design experiments, creative coding, and more.',
+  },
+  twitter: {
+    title: 'Explorations',
+    description: 'Fun projects and explorations by Prasshanna — design experiments, creative coding, and more.',
+  },
 };
 
 export default function ExplorationsPage() {

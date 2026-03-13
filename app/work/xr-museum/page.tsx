@@ -4,8 +4,15 @@ import { PageScripts } from './PageScripts';
 
 export const metadata: Metadata = {
   title: 'XR Museum',
-  openGraph: { title: 'XR Museum' },
-  twitter: { title: 'XR Museum' },
+  description: 'An extended reality system built for museums to view data in a visually beautiful way, like never before.',
+  openGraph: {
+    title: 'XR Museum Experience',
+    description: 'An extended reality system built for museums to view data in a visually beautiful way, like never before.',
+  },
+  twitter: {
+    title: 'XR Museum Experience',
+    description: 'An extended reality system built for museums to view data in a visually beautiful way, like never before.',
+  },
 };
 
 export default function XRMuseumPage() {
@@ -176,7 +183,7 @@ export default function XRMuseumPage() {
         </div>
       </div>
       <div className="w-layout-grid story-hero-halves">
-        <div id="w-node-abcec652-d190-315e-b334-8a8919225ece-5faf1661" className="image-wrap-hero-story"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.9921875px" srcSet="..////////////images/XR-Museum-Final-p-500.avif 500w, /images/XR-Museum-Final-p-800.avif 800w, /images/XR-Museum-Final.avif 1947w" alt="" src="/images/XR-Museum-Final.avif" loading="lazy" className="image-cover-15" />
+        <div id="w-node-abcec652-d190-315e-b334-8a8919225ece-5faf1661" className="image-wrap-hero-story"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.9921875px" srcSet="/images/XR-Museum-Final-p-500.avif 500w, /images/XR-Museum-Final-p-800.avif 800w, /images/XR-Museum-Final.avif 1947w" alt="" src="/images/XR-Museum-Final.avif" loading="lazy" className="image-cover-15" />
           <div className="overlay-tag-card with-logo"></div>
         </div>
         <div className="right-story-hero">
@@ -214,7 +221,7 @@ export default function XRMuseumPage() {
             </div>
             <a href="#" id="w-node-abcec652-d190-315e-b334-8a8919225efd-5faf1661" className="cta-feature-card w-inline-block">
               <div className="cta-icon-wrapper icon-yellow">
-                <div data-poster-url="https://cdn.prod.website-files.com/6722c9846b76c67b67acccff%2F686418b8dcfaa6f01d679996_683e68d817f8edd11ed322b4_147813-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/6722c9846b76c67b67acccff%2F686418b8dcfaa6f01d679996_683e68d817f8edd11ed322b4_147813-transcode.mp4,https://cdn.prod.website-files.com/6722c9846b76c67b67acccff%2F686418b8dcfaa6f01d679996_683e68d817f8edd11ed322b4_147813-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" className="background-video-6 small w-background-video w-background-video-atom"><video id="abcec652-d190-315e-b334-8a8919225eff-video" autoPlay={true} loop="" style={{ backgroundImage: 'url(&quot;https://cdn.prod.website-files.com/6722c9846b76c67b67acccff%2F686418b8dcfaa6f01d679996_683e68d817f8edd11ed322b4_147813-poster-00001.jpg&quot;)' }} muted="" playsInline="" data-wf-ignore="true" data-object-fit="cover">
+                <div data-poster-url="https://cdn.prod.website-files.com/6722c9846b76c67b67acccff%2F686418b8dcfaa6f01d679996_683e68d817f8edd11ed322b4_147813-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/6722c9846b76c67b67acccff%2F686418b8dcfaa6f01d679996_683e68d817f8edd11ed322b4_147813-transcode.mp4,https://cdn.prod.website-files.com/6722c9846b76c67b67acccff%2F686418b8dcfaa6f01d679996_683e68d817f8edd11ed322b4_147813-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" className="background-video-6 small w-background-video w-background-video-atom"><video id="abcec652-d190-315e-b334-8a8919225eff-video" autoPlay={true} loop="" style={{ backgroundImage: 'url(https://cdn.prod.website-files.com/6722c9846b76c67b67acccff%2F686418b8dcfaa6f01d679996_683e68d817f8edd11ed322b4_147813-poster-00001.jpg)' }} muted="" playsInline="" data-wf-ignore="true" data-object-fit="cover">
                     <source src="https://cdn.prod.website-files.com/6722c9846b76c67b67acccff%2F686418b8dcfaa6f01d679996_683e68d817f8edd11ed322b4_147813-transcode.mp4" data-wf-ignore="true" />
                     <source src="https://cdn.prod.website-files.com/6722c9846b76c67b67acccff%2F686418b8dcfaa6f01d679996_683e68d817f8edd11ed322b4_147813-transcode.webm" data-wf-ignore="true" />
                   </video></div>
@@ -243,7 +250,7 @@ export default function XRMuseumPage() {
   <div data-w-id="fb46736c-3773-d70c-6938-e0082e0f35c2" className="wrap-hero-5">
     <section className="section-17 about-a-video-section">
       <div className="video-about-a">
-        <div data-poster-url="../videos/Apple-Event-Summary-Slide-remix-6-1_poster.0000000.jpg" data-video-urls="../videos/Apple-Event-Summary-Slide-remix-6-1_mp4.mp4,../videos/Apple-Event-Summary-Slide-remix-6-1_webm.webm" data-autoplay="true" data-loop="false" data-wf-ignore="true" className="video-cover-2 parallax-video w-background-video w-background-video-atom"><video id="fb46736c-3773-d70c-6938-e0082e0f35ce-video" autoPlay={true} style={{ backgroundImage: 'url(&quot;/videos/Apple-Event-Summary-Slide-remix-6-1_poster.0000000.jpg&quot;)' }} muted="" playsInline="" data-wf-ignore="true" data-object-fit="cover">
+        <div data-poster-url="../videos/Apple-Event-Summary-Slide-remix-6-1_poster.0000000.jpg" data-video-urls="../videos/Apple-Event-Summary-Slide-remix-6-1_mp4.mp4,../videos/Apple-Event-Summary-Slide-remix-6-1_webm.webm" data-autoplay="true" data-loop="false" data-wf-ignore="true" className="video-cover-2 parallax-video w-background-video w-background-video-atom"><video id="fb46736c-3773-d70c-6938-e0082e0f35ce-video" autoPlay={true} style={{ backgroundImage: 'url(../videos/Apple-Event-Summary-Slide-remix-6-1_poster.0000000.jpg)' }} muted="" playsInline="" data-wf-ignore="true" data-object-fit="cover">
             <source src="/videos/Apple-Event-Summary-Slide-remix-6-1_mp4.mp4" data-wf-ignore="true" />
             <source src="/videos/Apple-Event-Summary-Slide-remix-6-1_webm.webm" data-wf-ignore="true" />
           </video></div>
@@ -297,7 +304,7 @@ export default function XRMuseumPage() {
   </section>
   <section className="section-30">
     <div className="w-layout-blockcontainer main-container-28 w-container">
-      <div className="w-layout-grid hmoe-c-features-halves"><img id="w-node-_5d19205e-2fbf-141a-f40d-371f7ac3989a-5faf1661" sizes="100vw" alt="" src="/images/screenshot_1.5x_postspark_2026-01-16_03-59-39.avif" loading="lazy" srcSet="..////////////images/screenshot_1.5x_postspark_2026-01-16_03-59-39-p-500.avif 500w, /images/screenshot_1.5x_postspark_2026-01-16_03-59-39-p-800.avif 800w, /images/screenshot_1.5x_postspark_2026-01-16_03-59-39.avif 1440w" className="home-c-feature-image" />
+      <div className="w-layout-grid hmoe-c-features-halves"><img id="w-node-_5d19205e-2fbf-141a-f40d-371f7ac3989a-5faf1661" sizes="100vw" alt="" src="/images/screenshot_1.5x_postspark_2026-01-16_03-59-39.avif" loading="lazy" srcSet="/images/screenshot_1.5x_postspark_2026-01-16_03-59-39-p-500.avif 500w, /images/screenshot_1.5x_postspark_2026-01-16_03-59-39-p-800.avif 800w, /images/screenshot_1.5x_postspark_2026-01-16_03-59-39.avif 1440w" className="home-c-feature-image" />
         <div className="home-c-features-list">
           <div data-w-id="5d19205e-2fbf-141a-f40d-371f7ac3989c" style={{ opacity: 0 }} className="home-c-feature">
             <div className="feature-top-tile"><img loading="lazy" src="/images/Squaresblack1.webp" alt="" className="feature-icon-tiny" />
@@ -359,12 +366,12 @@ export default function XRMuseumPage() {
             </div>
           </div>
           <div className="column-right w-col w-col-6">
-            <div className="column-image-wrap"><img sizes="100vw" srcSet="..////////////images/Layout-Exploration_1Layout-Exploration.avif 500w, /images/Layout-Exploration_1Layout-Exploration.avif 1168w" alt="" src="/images/Layout-Exploration_1Layout-Exploration.avif" loading="lazy" className="image-cover-16" /></div>
+            <div className="column-image-wrap"><img sizes="100vw" srcSet="/images/Layout-Exploration_1Layout-Exploration.avif 500w, /images/Layout-Exploration_1Layout-Exploration.avif 1168w" alt="" src="/images/Layout-Exploration_1Layout-Exploration.avif" loading="lazy" className="image-cover-16" /></div>
           </div>
         </div>
         <div className="column-9 text-top w-row">
           <div className="column-left w-col w-col-6">
-            <div className="column-image-wrap background"><img sizes="100vw" srcSet="..////////////images/Component-set_1Component-set.avif 500w, /images/Component-set_1Component-set.avif 1612w" alt="" src="/images/Component-set_1Component-set.avif" loading="lazy" className="image-cover-16" /></div>
+            <div className="column-image-wrap background"><img sizes="100vw" srcSet="/images/Component-set_1Component-set.avif 500w, /images/Component-set_1Component-set.avif 1612w" alt="" src="/images/Component-set_1Component-set.avif" loading="lazy" className="image-cover-16" /></div>
           </div>
           <div className="column-right w-col w-col-6">
             <div className="column-content-wrap">
@@ -389,14 +396,14 @@ export default function XRMuseumPage() {
     </div>
   </section>
   <section id="highfid" className="project-panel white full">
-    <div data-w-id="138822b2-c11a-ec64-b263-6e65f64ad7b1" className="div-block-5"><img sizes="100vw" srcSet="..////////////images/Render-final-2_1Render-final-2.avif 500w, /images/Render-final-2_1Render-final-2.avif 800w, /images/Render-final-2_1Render-final-2.avif 1080w, /images/Render-final-2_1Render-final-2.avif 3600w" alt="" src="/images/Render-final-2_1Render-final-2.avif" loading="lazy" className="image-4" /></div>
+    <div data-w-id="138822b2-c11a-ec64-b263-6e65f64ad7b1" className="div-block-5"><img sizes="100vw" srcSet="/images/Render-final-2_1Render-final-2.avif 500w, /images/Render-final-2_1Render-final-2.avif 800w, /images/Render-final-2_1Render-final-2.avif 1080w, /images/Render-final-2_1Render-final-2.avif 3600w" alt="" src="/images/Render-final-2_1Render-final-2.avif" loading="lazy" className="image-4" /></div>
   </section>
   <div id="highfid" className="section-tablet-scroll-animation">
     <div className="container-w2 gutter-outside viewable">
       <div className="tablet-mockup-animation">
         <div data-w-id="138822b2-c11a-ec64-b263-6e65f64ad7b6" className="_3d-tablet-wrap">
           <div className="_3d-tablet-inner">
-            <div className="ipad-mockup"><img sizes="100vw" srcSet="..////////////images/Glasses_1Glasses.avif 500w, /images/Glasses_1Glasses.avif 1218w" alt="" src="/images/Glasses_1Glasses.avif" loading="lazy" className="ipad-shape" /></div>
+            <div className="ipad-mockup"><img sizes="100vw" srcSet="/images/Glasses_1Glasses.avif 500w, /images/Glasses_1Glasses.avif 1218w" alt="" src="/images/Glasses_1Glasses.avif" loading="lazy" className="ipad-shape" /></div>
           </div>
         </div>
       </div>
@@ -408,7 +415,7 @@ export default function XRMuseumPage() {
         <div className="service-a-case-study">
           <a href="#" className="case-study-service-a w-inline-block"><img loading="lazy" src="/images/first-final-final.gif" alt="" className="image-3" /></a>
         </div>
-        <div className="service-a-right-card"><img sizes="100vw" srcSet="..////////////images/ashley-whitlatch-36aGnv29Ss0-unsplash-p-500.avif 500w, /images/ashley-whitlatch-36aGnv29Ss0-unsplash-p-800.avif 800w, /images/ashley-whitlatch-36aGnv29Ss0-unsplash-p-1080.avif 1080w, /images/ashley-whitlatch-36aGnv29Ss0-unsplash.avif 3024w" alt="" src="/images/ashley-whitlatch-36aGnv29Ss0-unsplash.avif" loading="lazy" className="image-cover-17" />
+        <div className="service-a-right-card"><img sizes="100vw" srcSet="/images/ashley-whitlatch-36aGnv29Ss0-unsplash-p-500.avif 500w, /images/ashley-whitlatch-36aGnv29Ss0-unsplash-p-800.avif 800w, /images/ashley-whitlatch-36aGnv29Ss0-unsplash-p-1080.avif 1080w, /images/ashley-whitlatch-36aGnv29Ss0-unsplash.avif 3024w" alt="" src="/images/ashley-whitlatch-36aGnv29Ss0-unsplash.avif" loading="lazy" className="image-cover-17" />
           <div className="overlay-client-story">
             <div className="card-client-story">
               <div className="text-block-14">Welcome to the <em>experience</em></div>
@@ -426,7 +433,7 @@ export default function XRMuseumPage() {
   <section className="section-33">
     <div className="w-layout-blockcontainer main-container-31 w-container">
       <div className="w-layout-grid service-a-hero-halves reversed">
-        <div className="service-a-right-card"><img sizes="100vw" srcSet="..////////////images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash-p-500.avif 500w, /images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash-p-800.avif 800w, /images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash-p-1080.avif 1080w, /images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash-p-1600.avif 1600w, /images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash-p-2000.avif 2000w, /images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash.avif 6000w" alt="" src="/images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash.avif" loading="lazy" className="image-cover-17" />
+        <div className="service-a-right-card"><img sizes="100vw" srcSet="/images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash-p-500.avif 500w, /images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash-p-800.avif 800w, /images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash-p-1080.avif 1080w, /images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash-p-1600.avif 1600w, /images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash-p-2000.avif 2000w, /images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash.avif 6000w" alt="" src="/images/codioful-formerly-gradienta-O10vBIDRkZw-unsplash.avif" loading="lazy" className="image-cover-17" />
           <div className="overlay-client-story">
             <div className="card-client-story">
               <div className="text-block-14"><em>Explore</em> Mode</div>
@@ -450,7 +457,7 @@ export default function XRMuseumPage() {
         <div className="service-a-case-study">
           <a href="#" className="case-study-service-a w-inline-block"><img loading="lazy" src="/images/Sequence-10.gif" alt="" className="image-3" /></a>
         </div>
-        <div className="service-a-right-card"><img sizes="100vw" srcSet="..////////////images/milad-fakurian-nY14Fs8pxT8-unsplash-p-500.avif 500w, /images/milad-fakurian-nY14Fs8pxT8-unsplash-p-800.avif 800w, /images/milad-fakurian-nY14Fs8pxT8-unsplash-p-1080.avif 1080w, /images/milad-fakurian-nY14Fs8pxT8-unsplash-p-1600.avif 1600w, /images/milad-fakurian-nY14Fs8pxT8-unsplash-p-2000.avif 2000w, /images/milad-fakurian-nY14Fs8pxT8-unsplash-p-2600.avif 2600w, /images/milad-fakurian-nY14Fs8pxT8-unsplash.avif 8000w" alt="" src="/images/milad-fakurian-nY14Fs8pxT8-unsplash.avif" loading="lazy" className="image-cover-17" />
+        <div className="service-a-right-card"><img sizes="100vw" srcSet="/images/milad-fakurian-nY14Fs8pxT8-unsplash-p-500.avif 500w, /images/milad-fakurian-nY14Fs8pxT8-unsplash-p-800.avif 800w, /images/milad-fakurian-nY14Fs8pxT8-unsplash-p-1080.avif 1080w, /images/milad-fakurian-nY14Fs8pxT8-unsplash-p-1600.avif 1600w, /images/milad-fakurian-nY14Fs8pxT8-unsplash-p-2000.avif 2000w, /images/milad-fakurian-nY14Fs8pxT8-unsplash-p-2600.avif 2600w, /images/milad-fakurian-nY14Fs8pxT8-unsplash.avif 8000w" alt="" src="/images/milad-fakurian-nY14Fs8pxT8-unsplash.avif" loading="lazy" className="image-cover-17" />
           <div className="overlay-client-story">
             <div className="card-client-story">
               <div className="text-block-14"><em>All Artifact </em>Mode</div>
@@ -468,7 +475,7 @@ export default function XRMuseumPage() {
   <section className="section-33">
     <div className="w-layout-blockcontainer main-container-31 w-container">
       <div className="w-layout-grid service-a-hero-halves reversed">
-        <div className="service-a-right-card"><img sizes="100vw" srcSet="..////////////images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-500.avif 500w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-800.avif 800w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-1080.avif 1080w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-1600.avif 1600w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-2000.avif 2000w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash.avif 6000w" alt="" src="/images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash.avif" loading="lazy" className="image-cover-17" />
+        <div className="service-a-right-card"><img sizes="100vw" srcSet="/images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-500.avif 500w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-800.avif 800w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-1080.avif 1080w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-1600.avif 1600w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-2000.avif 2000w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash.avif 6000w" alt="" src="/images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash.avif" loading="lazy" className="image-cover-17" />
           <div className="overlay-client-story">
             <div className="card-client-story">
               <div className="text-block-14">Main artifact<em> data dashboard</em></div>
@@ -493,7 +500,7 @@ export default function XRMuseumPage() {
           <div role="list" className="w-dyn-items">
             <div role="listitem" className="w-dyn-item">
               <a href="#" className="case-study-service-a w-inline-block">
-                <div data-poster-url="https://cdn.prod.website-files.com/68c9c39b88fdc718ad27d553%2F68cff4019b59179f7b574bf0_ServiceC-poster-00001.jpg" data-video-urls="../videos/ServiceC-poster-00001.jpg,../videos/ServiceC-transcode.mp4,../videos/ServiceC-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" className="video-service-a w-background-video w-background-video-atom"><video id="7b742ffc-538e-024c-1e94-ba188c8d87e1-video" autoPlay={true} loop="" style={{ backgroundImage: 'url(&quot;https://cdn.prod.website-files.com/68c9c39b88fdc718ad27d553%2F68cff4019b59179f7b574bf0_ServiceC-poster-00001.jpg&quot;)' }} muted="" playsInline="" data-wf-ignore="true" data-object-fit="cover">
+                <div data-poster-url="https://cdn.prod.website-files.com/68c9c39b88fdc718ad27d553%2F68cff4019b59179f7b574bf0_ServiceC-poster-00001.jpg" data-video-urls="../videos/ServiceC-poster-00001.jpg,../videos/ServiceC-transcode.mp4,../videos/ServiceC-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" className="video-service-a w-background-video w-background-video-atom"><video id="7b742ffc-538e-024c-1e94-ba188c8d87e1-video" autoPlay={true} loop="" style={{ backgroundImage: 'url(https://cdn.prod.website-files.com/68c9c39b88fdc718ad27d553%2F68cff4019b59179f7b574bf0_ServiceC-poster-00001.jpg)' }} muted="" playsInline="" data-wf-ignore="true" data-object-fit="cover">
                     <source src="/videos/ServiceC-poster-00001.jpg" data-wf-ignore="true" />
                     <source src="/videos/ServiceC-transcode.mp4" data-wf-ignore="true" />
                     <source src="/videos/ServiceC-transcode.webm" data-wf-ignore="true" />
@@ -520,7 +527,7 @@ export default function XRMuseumPage() {
         <div className="service-a-case-study">
           <a href="#" className="case-study-service-a w-inline-block"><img loading="lazy" src="/images/Map-enlarged.gif" alt="" className="image-80" /></a>
         </div>
-        <div className="service-a-right-card"><img sizes="100vw" srcSet="..////////////images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash-p-500.avif 500w, /images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash-p-800.avif 800w, /images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash-p-1080.avif 1080w, /images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash-p-1600.avif 1600w, /images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash-p-2000.avif 2000w, /images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash.avif 6000w" alt="" src="/images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash.avif" loading="lazy" className="image-cover-17" />
+        <div className="service-a-right-card"><img sizes="100vw" srcSet="/images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash-p-500.avif 500w, /images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash-p-800.avif 800w, /images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash-p-1080.avif 1080w, /images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash-p-1600.avif 1600w, /images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash-p-2000.avif 2000w, /images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash.avif 6000w" alt="" src="/images/codioful-formerly-gradienta-lweK7Wme_jo-unsplash.avif" loading="lazy" className="image-cover-17" />
           <div className="overlay-client-story">
             <div className="card-client-story">
               <div className="text-block-14">Enlarged <em>Map View</em></div>
@@ -538,7 +545,7 @@ export default function XRMuseumPage() {
   <section className="section-33">
     <div className="w-layout-blockcontainer main-container-31 w-container">
       <div className="w-layout-grid service-a-hero-halves reversed">
-        <div className="service-a-right-card"><img sizes="100vw" srcSet="..////////////images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-500.avif 500w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-800.avif 800w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-1080.avif 1080w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-1600.avif 1600w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-2000.avif 2000w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash.avif 6000w" alt="" src="/images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash.avif" loading="lazy" className="image-cover-17" />
+        <div className="service-a-right-card"><img sizes="100vw" srcSet="/images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-500.avif 500w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-800.avif 800w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-1080.avif 1080w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-1600.avif 1600w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash-p-2000.avif 2000w, /images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash.avif 6000w" alt="" src="/images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash.avif" loading="lazy" className="image-cover-17" />
           <div className="overlay-client-story">
             <div className="card-client-story">
               <div className="text-block-14">Enlarged <em>Globe View</em></div>
@@ -562,7 +569,7 @@ export default function XRMuseumPage() {
         <div className="service-a-case-study">
           <a href="#" className="case-study-service-a w-inline-block"><img loading="lazy" src="/images/ezgif-5-70fa1cbd22.gif" alt="" className="image-82" /></a>
         </div>
-        <div className="service-a-right-card"><img sizes="100vw" srcSet="..////////////images/GraphImage.webp 500w, /images/GraphImage.webp 726w" alt="" src="/images/GraphImage.webp" loading="lazy" className="image-cover-17" />
+        <div className="service-a-right-card"><img sizes="100vw" srcSet="/images/GraphImage.webp 500w, /images/GraphImage.webp 726w" alt="" src="/images/GraphImage.webp" loading="lazy" className="image-cover-17" />
           <div className="overlay-client-story">
             <div className="card-client-story">
               <div className="text-block-14">Enlarged <em>Artifact View</em></div>
@@ -648,20 +655,20 @@ export default function XRMuseumPage() {
               <div className="label">(latest <br />projects)</div>
               <div className="projects">
                 <div className="project-grid-home">
-                  <a data-w-id="9a0dc2f1-a022-9a55-6ae0-75a8c77b6ed5" href="../work/us-hab-cti.html" className="project-tile-small w-inline-block">
+                  <a data-w-id="9a0dc2f1-a022-9a55-6ae0-75a8c77b6ed5" href="/work/us-hab-cti" className="project-tile-small w-inline-block">
                     <div className="project-link-overlay">
                       <div className="cta-main light">
                         <div className="text-block">View project</div>
                       </div>
                     </div>
-                    <div data-w-id="9a0dc2f1-a022-9a55-6ae0-75a8c77b6eda" className="project-v2-image-wrap"><img sizes="100vw" srcSet="..////////////images/device-mockup_1.5x_postspark_2026-01-13_01-13-53-p-500.avif 500w, /images/device-mockup_1.5x_postspark_2026-01-13_01-13-53.avif 1080w" alt="" src="/images/device-mockup_1.5x_postspark_2026-01-13_01-13-53.avif" loading="lazy" className="image-cover parallax" /></div>
+                    <div data-w-id="9a0dc2f1-a022-9a55-6ae0-75a8c77b6eda" className="project-v2-image-wrap"><img sizes="100vw" srcSet="/images/device-mockup_1.5x_postspark_2026-01-13_01-13-53-p-500.avif 500w, /images/device-mockup_1.5x_postspark_2026-01-13_01-13-53.avif 1080w" alt="" src="/images/device-mockup_1.5x_postspark_2026-01-13_01-13-53.avif" loading="lazy" className="image-cover parallax" /></div>
                     <div className="project-dark-overlay"></div>
                     <div className="project-small-overlay">
                       <div className="text-big">US HAB-CTI Clearinghouse Web app</div>
                       <div className="text-big">2024-25</div>
                     </div>
                   </a>
-                  <a data-w-id="9a0dc2f1-a022-9a55-6ae0-75a8c77b6ee2" href="../work/xr-museum.html" aria-current="page" className="project-tile-small w-inline-block w--current">
+                  <a data-w-id="9a0dc2f1-a022-9a55-6ae0-75a8c77b6ee2" href="/work/xr-museum" aria-current="page" className="project-tile-small w-inline-block w--current">
                     <div className="project-link-overlay">
                       <div className="cta-main light">
                         <div className="text-block-2">View project</div>
@@ -674,7 +681,7 @@ export default function XRMuseumPage() {
                       <div className="text-big">(2024)</div>
                     </div>
                   </a>
-                  <a data-w-id="9a0dc2f1-a022-9a55-6ae0-75a8c77b6eef" href="../work/samsung-research.html" className="project-tile-small w-inline-block">
+                  <a data-w-id="9a0dc2f1-a022-9a55-6ae0-75a8c77b6eef" href="/work/samsung-research" className="project-tile-small w-inline-block">
                     <div className="project-link-overlay">
                       <div className="cta-main light">
                         <div className="text-block-3">View project</div>
@@ -687,7 +694,7 @@ export default function XRMuseumPage() {
                       <div className="text-big">(2022)</div>
                     </div>
                   </a>
-                  <a data-w-id="9a0dc2f1-a022-9a55-6ae0-75a8c77b6efc" href="../work/uyir.html" className="project-tile-small w-inline-block">
+                  <a data-w-id="9a0dc2f1-a022-9a55-6ae0-75a8c77b6efc" href="/work/uyir" className="project-tile-small w-inline-block">
                     <div className="project-link-overlay">
                       <div className="cta-main light">
                         <div className="text-block-4">View project</div>
